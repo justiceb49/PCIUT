@@ -1,0 +1,512 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+#include "resource.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_STDSCOPE            ICON    DISCARDABLE     "stdScope.ICO"
+IDI_SMALL               ICON    DISCARDABLE     "SMALL.ICO"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDC_STDSCOPE MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Open Parameter File...",     101
+        MENUITEM "&Save Parameter File",        102
+        MENUITEM "Save Parameter &As...",       103
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       IDM_EXIT
+    END
+    POPUP "&Settings"
+    BEGIN
+        MENUITEM "&Parameters...",              201
+        MENUITEM "&Display...",                 202
+        MENUITEM SEPARATOR
+        MENUITEM "&Quick FFT...",               207
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About ...",                  IDM_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDC_STDSCOPE ACCELERATORS MOVEABLE PURE 
+BEGIN
+    "?",            IDM_ABOUT,              ASCII,  ALT
+    "/",            IDM_ABOUT,              ASCII,  ALT
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""resource.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  22, 17, 230, 207
+STYLE DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 8, "System"
+BEGIN
+    CTEXT           "Standard UT Scope Version 2.02",IDC_STATIC,49,10,119,8,
+                    SS_NOPREFIX
+    CTEXT           "Copyright (c) 2000-2018 US Ultratek",IDC_STATIC,34,21,
+                    150,8
+    DEFPUSHBUTTON   "OK",IDOK,195,6,30,11,WS_GROUP
+    CTEXT           "www.usultratek.com",IDC_STATIC,47,32,124,8
+    GROUPBOX        "Board Information",IDC_STATIC,3,48,222,154
+    CTEXT           "",200,7,57,213,141
+END
+
+ONEENTRY DIALOG DISCARDABLE  40, 30, 181, 56
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+FONT 8, "SYSTEM"
+BEGIN
+    LTEXT           "",100,123,3,52,10
+    EDITTEXT        101,123,17,52,12
+    RTEXT           "Current value:",1001,32,3,89,8
+    CONTROL         "",-1,"Static",SS_BLACKRECT,8,34,168,1
+    DEFPUSHBUTTON   "OK",1,35,39,39,14
+    PUSHBUTTON      "Cancel",2,115,39,39,14
+    EDITTEXT        1002,12,16,109,16,ES_RIGHT | ES_MULTILINE | ES_READONLY | 
+                    NOT WS_BORDER
+END
+
+DLG_DAC DIALOGEX 0, 0, 127, 354
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "DAC Table Settings"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "DAC  On",ID_DAC_ON,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,5,6,41,12
+    LTEXT           "Segment(s):",IDC_STATIC_NUMSEC,47,8,43,11,0,WS_EX_RIGHT
+    PUSHBUTTON      "",ID_DAC_NUMSECS,91,6,30,13
+    LTEXT           "Segment",IDC_STATIC_SEC,5,53,30,11
+    LTEXT           "Length (us)",IDC_STATIC_SECLEN,37,53,41,12
+    LTEXT           "Gain (dB)",IDC_STATIC_GAIN,85,53,32,9
+    LTEXT           "1",IDC_STATIC1,17,71,8,8
+    PUSHBUTTON      "",101,37,68,39,12,WS_DISABLED
+    PUSHBUTTON      "",201,82,63,39,12,WS_DISABLED
+    LTEXT           "2",IDC_STATIC2,17,85,8,8
+    PUSHBUTTON      "",102,37,82,39,12,WS_DISABLED
+    PUSHBUTTON      "",202,82,77,39,12,WS_DISABLED
+    LTEXT           "3",IDC_STATIC3,17,99,10,8
+    PUSHBUTTON      "",103,37,96,39,12,WS_DISABLED
+    PUSHBUTTON      "",203,82,91,39,12,WS_DISABLED
+    LTEXT           "4",IDC_STATIC4,17,113,8,8
+    PUSHBUTTON      "",104,37,110,39,12,WS_DISABLED
+    PUSHBUTTON      "",204,82,105,39,12,WS_DISABLED
+    LTEXT           "5",IDC_STATIC5,17,127,8,8
+    PUSHBUTTON      "",105,37,124,39,12,WS_DISABLED
+    PUSHBUTTON      "",205,82,119,39,12,WS_DISABLED
+    LTEXT           "6",IDC_STATIC6,17,141,8,8
+    PUSHBUTTON      "",106,37,138,39,12,WS_DISABLED
+    PUSHBUTTON      "",206,82,133,39,12,WS_DISABLED
+    LTEXT           "7",IDC_STATIC7,17,155,8,8
+    PUSHBUTTON      "",107,37,152,39,12,WS_DISABLED
+    PUSHBUTTON      "",207,82,147,39,12,WS_DISABLED
+    LTEXT           "8",IDC_STATIC8,17,169,8,8
+    PUSHBUTTON      "",108,37,166,39,12,WS_DISABLED
+    PUSHBUTTON      "",208,82,161,39,12,WS_DISABLED
+    LTEXT           "9",IDC_STATIC9,17,183,8,8
+    PUSHBUTTON      "",109,37,180,39,12,WS_DISABLED
+    PUSHBUTTON      "",209,82,175,39,12,WS_DISABLED
+    LTEXT           "10",IDC_STATIC10,17,197,8,8
+    PUSHBUTTON      "",110,37,194,39,12,WS_DISABLED
+    PUSHBUTTON      "",210,82,189,39,12,WS_DISABLED
+    LTEXT           "11",IDC_STATIC11,17,211,8,8
+    PUSHBUTTON      "",111,37,208,39,12,WS_DISABLED
+    PUSHBUTTON      "",211,82,203,39,12,WS_DISABLED
+    LTEXT           "12",IDC_STATIC12,17,225,8,8
+    PUSHBUTTON      "",112,37,222,39,12,WS_DISABLED
+    PUSHBUTTON      "",212,82,217,39,12,WS_DISABLED
+    LTEXT           "13",IDC_STATIC13,17,239,8,8
+    PUSHBUTTON      "",113,37,236,39,12,WS_DISABLED
+    PUSHBUTTON      "",213,82,231,39,12,WS_DISABLED
+    LTEXT           "14",IDC_STATIC14,17,253,8,8
+    PUSHBUTTON      "",114,37,250,39,12,WS_DISABLED
+    PUSHBUTTON      "",214,82,245,39,12,WS_DISABLED
+    LTEXT           "15",IDC_STATIC15,17,267,8,8
+    PUSHBUTTON      "",115,37,264,39,12,WS_DISABLED
+    PUSHBUTTON      "",215,82,259,39,12,WS_DISABLED
+    LTEXT           "16",IDC_STATIC16,17,281,8,8
+    PUSHBUTTON      "",116,37,278,39,12,WS_DISABLED
+    PUSHBUTTON      "",216,82,273,39,12,WS_DISABLED
+    LTEXT           "17",IDC_STATIC17,17,295,8,8
+    PUSHBUTTON      "",117,37,292,39,12,WS_DISABLED
+    PUSHBUTTON      "",217,82,287,39,12,WS_DISABLED
+    LTEXT           "18",IDC_STATIC18,17,309,8,8
+    PUSHBUTTON      "",118,37,306,39,12,WS_DISABLED
+    PUSHBUTTON      "",218,82,301,39,12,WS_DISABLED
+    LTEXT           "19",IDC_STATIC19,17,323,8,8
+    PUSHBUTTON      "",119,37,320,39,12,WS_DISABLED
+    PUSHBUTTON      "",219,82,315,39,12,WS_DISABLED
+    LTEXT           "20",IDC_STATIC20,17,337,8,8
+    PUSHBUTTON      "",120,37,334,39,12,WS_DISABLED
+    PUSHBUTTON      "",220,82,329,39,12,WS_DISABLED
+    PUSHBUTTON      "Download",ID_DAC_DOWNLOAD,6,25,53,15
+    PUSHBUTTON      "Close",ID_DAC_CLOSE,68,25,53,15
+END
+
+STRENTRY DIALOG DISCARDABLE  43, 41, 178, 45
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+FONT 8, "SYSTEM"
+BEGIN
+    EDITTEXT        101,7,5,165,12,ES_AUTOHSCROLL
+    CONTROL         "",-1,"Static",SS_BLACKRECT,5,23,168,1
+    DEFPUSHBUTTON   "OK",1,32,28,39,14
+    PUSHBUTTON      "Cancel",2,112,28,39,14
+END
+
+DISPLAY DIALOG DISCARDABLE  22, 17, 266, 147
+STYLE DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "Select Instrument Type"
+FONT 8, "System"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,187,108,70,12,WS_GROUP
+    RTEXT           "Horizontal Unit",IDC_STATIC,4,6,55,12
+    COMBOBOX        100,61,4,70,46,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    RTEXT           "Sound Velocity",IDC_STATIC,4,24,55,12
+    CONTROL         "Round Trip",102,"Button",BS_AUTOCHECKBOX | BS_LEFT | 
+                    WS_TABSTOP,60,74,54,12
+    RTEXT           "Vertical Unit",IDC_STATIC,138,6,48,12
+    COMBOBOX        103,188,4,70,46,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "Cancel",IDCANCEL,187,126,70,12,WS_GROUP
+    EDITTEXT        101,61,22,70,12,ES_AUTOHSCROLL
+    RTEXT           "Thickness",IDC_STATIC,4,41,55,12
+    EDITTEXT        104,61,40,70,12,ES_AUTOHSCROLL
+    RTEXT           "Display Type",IDC_STATIC,138,24,48,12
+    COMBOBOX        105,188,22,70,46,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "Cppy thickness to clip board every",110,"Button",
+                    BS_AUTOCHECKBOX | BS_LEFT | WS_TABSTOP,60,58,125,12
+    EDITTEXT        111,188,58,22,12,ES_AUTOHSCROLL
+    LTEXT           "milli seconds",IDC_STATIC,211,59,46,10
+    RTEXT           "Density",IDC_STATIC,131,42,55,12
+    EDITTEXT        106,188,40,70,12,ES_AUTOHSCROLL
+    CONTROL         "Audio Alarm on indication",107,"Button",BS_AUTOCHECKBOX | 
+                    BS_LEFT | WS_TABSTOP,60,90,119,12
+    CONTROL         "Active Output Pins on indication",108,"Button",
+                    BS_AUTOCHECKBOX | BS_LEFT | WS_TABSTOP,60,108,122,12
+    CONTROL         "Virtual LED on indication",109,"Button",BS_AUTOCHECKBOX | 
+                    BS_LEFT | WS_TABSTOP,60,126,117,12
+END
+
+PARAMETER DIALOGEX 65523, 45, 460, 165
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Parmeters"
+FONT 10, "System", 0, 0, 0x1
+BEGIN
+    COMBOBOX        1103,235,45,40,84,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "700 ns",117,235,30,40,12
+    PUSHBUTTON      "300 V",115,50,30,50,12
+    RTEXT           "Pulse voltage",10100,3,32,45,8
+    RTEXT           "Pulse width",10102,193,32,40,8
+    RTEXT           "Damping",10103,203,47,30,8
+    PUSHBUTTON      "gain",109,323,60,28,12
+    RTEXT           "Gain (dB)",10105,283,63,38,8
+    PUSHBUTTON      "DC",110,323,45,28,12
+    RTEXT           "DC Offset(mV)",10106,276,47,45,8
+    COMBOBOX        102,147,45,40,54,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    RTEXT           "HPF",10108,103,47,43,8
+    COMBOBOX        103,147,30,40,86,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    RTEXT           "LPF",10107,104,32,41,8
+    SCROLLBAR       1204,351,59,11,14,SBS_VERT
+    SCROLLBAR       1206,351,44,11,14,SBS_VERT
+    RTEXT           "TX channel",10200,193,18,40,8
+    COMBOBOX        1101,323,30,40,48,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    RTEXT           "Signal",10202,289,32,32,8
+    COMBOBOX        101,147,15,40,69,CBS_DROPDOWNLIST | CBS_DISABLENOSCROLL | 
+                    WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Rate (MSPS)",10109,103,17,42,8
+    COMBOBOX        114,235,60,40,48,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    RTEXT           "Probe",10112,196,62,38,8
+    RTEXT           "Length",10111,107,77,38,9
+    PUSHBUTTON      "length",105,147,75,40,12
+    RTEXT           "RX channel",10201,278,17,42,8
+    PUSHBUTTON      "TX",121,235,15,40,12
+    PUSHBUTTON      "RX",111,322,15,40,12
+    COMBOBOX        108,50,75,50,48,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    RTEXT           "Trigger",10104,16,77,32,8
+    PUSHBUTTON      "Copy selected data",112,372,105,83,12
+    RTEXT           "Frequency",3003,11,46,37,10
+    RTEXT           "Polarity",3004,13,62,35,8
+    PUSHBUTTON      "10000 kHz",3001,50,45,50,12
+    COMBOBOX        3002,50,60,50,54,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    GROUPBOX        "Cursor/Gate Readings",IDC_STATIC,368,3,91,147
+    RTEXT           "Average",IDC_STATIC,102,92,43,8
+    PUSHBUTTON      "# wave",116,50,15,50,12
+    RTEXT           "Number of waveforms",10114,10,13,38,17
+    RTEXT           "Post delay",IDC_STATIC,108,62,36,8
+    PUSHBUTTON      "delay",104,147,60,40,12
+    GROUPBOX        "Parameters for Waveform # ",IDC_STATIC,192,3,174,147
+    RTEXT           "Zoom ( % )",10203,371,47,42,8
+    PUSHBUTTON      "Zoom",113,415,45,40,12
+    GROUPBOX        "Global Parameters",IDC_STATIC,2,3,188,102
+    COMBOBOX        118,288,1,24,61,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    SCROLLBAR       301,371,15,84,11
+    RTEXT           "Start point",10204,371,32,42,8
+    PUSHBUTTON      "Start",119,415,30,40,12
+    CONTROL         "Pause",225,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT | 
+                    WS_TABSTOP,15,90,42,12,WS_EX_RIGHT
+    RTEXT           "Cursor 1",10205,370,62,28,11
+    CTEXT           "",302,399,60,22,12,WS_BORDER,WS_EX_CLIENTEDGE
+    CTEXT           "",303,421,60,35,12,WS_BORDER,WS_EX_CLIENTEDGE
+    RTEXT           "Cursor 2",10206,370,77,28,11
+    CTEXT           "",304,399,75,22,12,WS_BORDER,WS_EX_CLIENTEDGE
+    CTEXT           "",305,421,75,35,12,WS_BORDER,WS_EX_CLIENTEDGE
+    RTEXT           "C2 - C1",10207,370,92,28,11
+    CTEXT           "",306,399,90,22,12,WS_BORDER,WS_EX_CLIENTEDGE
+    CTEXT           "",307,421,90,35,12,WS_BORDER,WS_EX_CLIENTEDGE
+    GROUPBOX        "Port 0 status (pins 18 - 25)",IDC_STATIC,98,106,92,22
+    CTEXT           "0",5000,177,115,10,10,SS_SUNKEN
+    CTEXT           "0",5001,166,115,10,10,SS_SUNKEN
+    CTEXT           "0",5002,155,115,10,10,SS_SUNKEN
+    CTEXT           "0",5003,144,115,10,10,SS_SUNKEN
+    CTEXT           "0",5004,133,115,10,10,SS_SUNKEN
+    CTEXT           "0",5005,122,115,10,10,SS_SUNKEN
+    CTEXT           "0",5006,111,115,10,10,SS_SUNKEN
+    CTEXT           "0",5007,100,115,10,10,SS_SUNKEN
+    PUSHBUTTON      "0",6000,177,137,10,10
+    GROUPBOX        "Ouputs (pins 18 - 25)",IDC_STATIC,98,128,92,22
+    PUSHBUTTON      "0",6001,166,137,10,10
+    PUSHBUTTON      "0",6002,155,137,10,10
+    PUSHBUTTON      "0",6003,144,137,10,10
+    PUSHBUTTON      "0",6004,133,137,10,10
+    PUSHBUTTON      "0",6005,122,137,10,10
+    PUSHBUTTON      "0",6006,111,137,10,10
+    PUSHBUTTON      "0",6007,100,137,10,10
+    RTEXT           "X",10208,3,138,8,10
+    RTEXT           "Y",10209,48,138,8,10
+    COMBOBOX        120,323,105,40,48,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    RTEXT           "Gate type",10113,284,108,38,8
+    RTEXT           "Total gates",10210,190,77,42,8
+    PUSHBUTTON      "",122,234,75,40,12
+    COMBOBOX        123,234,105,40,48,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    RTEXT           "Gate #",10115,195,108,38,8
+    COMBOBOX        124,323,120,40,65,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    RTEXT           "Algorithm",10116,281,123,41,8
+    RTEXT           "Gate start",10211,194,122,38,8
+    PUSHBUTTON      "",125,234,120,40,12
+    RTEXT           "Gate length",10212,193,137,39,8
+    PUSHBUTTON      "",126,234,135,40,12
+    COMBOBOX        127,323,75,40,125,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    RTEXT           "Active pin",10117,284,77,38,8
+    COMBOBOX        128,323,90,40,48,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    RTEXT           "Active logic",10118,282,92,40,8
+    RTEXT           "Active time",10213,193,92,40,8
+    PUSHBUTTON      "",129,234,90,40,12
+    RTEXT           "Gate 1",10214,370,122,28,11
+    CTEXT           "",310,399,120,22,12,WS_BORDER,WS_EX_CLIENTEDGE
+    CTEXT           "",311,421,120,35,12,WS_BORDER,WS_EX_CLIENTEDGE
+    GROUPBOX        "Encoder readings",IDC_STATIC,2,128,94,22
+    RTEXT           "Threshold",10215,278,137,43,8
+    PUSHBUTTON      "",130,323,135,40,12
+    PUSHBUTTON      "-8388607",308,13,137,35,10
+    PUSHBUTTON      "-8388607",309,58,137,35,10
+    GROUPBOX        "",IDC_STATIC,192,70,174,80
+    GROUPBOX        "",IDC_STATIC,192,99,174,51
+    RTEXT           "Gate 2",10216,370,137,28,11
+    CTEXT           "",312,399,135,22,12,WS_BORDER,WS_EX_CLIENTEDGE
+    CTEXT           "",313,421,135,35,12,WS_BORDER,WS_EX_CLIENTEDGE
+    RTEXT           "Status:",10217,3,153,27,8
+    LTEXT           "",10218,32,152,426,11,SS_SUNKEN
+    PUSHBUTTON      "",106,147,90,40,12
+    GROUPBOX        "Port 0 I/O Configuration",IDC_STATIC,2,106,94,22
+    PUSHBUTTON      "I",6008,83,115,10,10
+    PUSHBUTTON      "I",6009,72,115,10,10
+    PUSHBUTTON      "I",6010,61,115,10,10
+    PUSHBUTTON      "I",6011,50,115,10,10
+    PUSHBUTTON      "I",6012,39,115,10,10
+    PUSHBUTTON      "I",6013,27,115,10,10
+    PUSHBUTTON      "I",6014,15,115,10,10
+    PUSHBUTTON      "I",6015,4,115,10,10
+END
+
+QFFT DIALOG DISCARDABLE  22, 17, 179, 156
+STYLE DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "QuickFFT Control"
+FONT 8, "System"
+BEGIN
+    DEFPUSHBUTTON   "Generate FFT",IDOK,4,143,56,12,WS_GROUP
+    PUSHBUTTON      "Close",IDCANCEL,122,143,56,12,WS_GROUP
+    LTEXT           "",200,134,74,43,12,SS_SUNKEN
+    GROUPBOX        "Procedures for Beam Angle Calibration",IDC_STATIC,3,16,
+                    176,125
+    PUSHBUTTON      "Set Probe Zero",201,5,74,56,13
+    LTEXT           "Step 1: Define the first ehco with two red line cursors (less than 1025 samples)",
+                    900,5,26,172,18,SS_SUNKEN
+    RTEXT           "Unit",IDC_STATIC,2,4,15,12
+    COMBOBOX        100,18,2,28,46,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    RTEXT           "Velocity",IDC_STATIC,48,4,27,12
+    EDITTEXT        101,76,2,32,12,ES_AUTOHSCROLL
+    RTEXT           "Thickenss",IDC_STATIC,109,3,35,12
+    EDITTEXT        104,145,2,32,12,ES_AUTOHSCROLL
+    LTEXT           "Step 2: Place the probe on the block with known thickness. Click the Set Probe Zero button. The Measured Thickness should be the same as above.",
+                    901,5,47,172,26,SS_SUNKEN
+    RTEXT           "Measured Thickness",IDC_STATIC,63,76,69,12
+    LTEXT           "Step 3. Move the probe on the standard A2 test block beaming towards the Perspex insert to maximize the echo returning from the insert. Then click the Calibrate Angle button.",
+                    902,5,90,172,35,SS_SUNKEN
+    PUSHBUTTON      "Calibrate Angle",202,5,126,56,13
+    LTEXT           "",203,134,126,43,12,SS_SUNKEN
+    RTEXT           "Beam Angle Result",IDC_STATIC,63,128,69,12
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    "DLG_DAC", DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 352
+    END
+
+    "DISPLAY", DIALOG
+    BEGIN
+        RIGHTMARGIN, 258
+    END
+
+    "PARAMETER", DIALOG
+    BEGIN
+        BOTTOMMARGIN, 157
+    END
+
+    "QFFT", DIALOG
+    BEGIN
+        RIGHTMARGIN, 171
+        BOTTOMMARGIN, 150
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_CURSOR1             CURSOR  DISCARDABLE     "cursor1.cur"
+IDC_CURSOR2             CURSOR  DISCARDABLE     "cursor2.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_LONGLED             BITMAP  DISCARDABLE     "res\\LongLED.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_APP_TITLE           "UT Scope"
+    IDC_STDSCOPE            "PCIUTSCOPE"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
