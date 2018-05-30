@@ -1,0 +1,4 @@
+﻿  CLIP.CPP
+c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.13.26128\include\xlocale(313): warning C4530: C++ exception handler used, but unwind semantics are not enabled. Specify /EHsc
+bscan.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/INCREMENTAL:NO' specification
+  PCIUTScope.vcxproj -> C:\Users\jub061\Desktop\UTScope358Win7\PCIUTscope\.\Release\DSPScope.exe
